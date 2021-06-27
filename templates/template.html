@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>MUSIC!</title>
+    </head>
+    <body>
+      <h1>MUSIC DATABASE</h1>
+        <ul>
+            {% for song in music %}
+      <li>{{ song.song }} - {{song.artist}}</li>
+            {% endfor %}
+        </ul>
+
+        <h3></h3>Want to add songs to the database?</h3>
+        <h2> <a href="/login">Log In</a> or <a href="/signup">Sign Up</a></h2>
+
+        <!-- <form aciton="/login" method="POST">
+            <label for="name">Name</label>
+            <input type="text" name="username">
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <input type="submit" value="Log In">
+        </form> -->
+
+
+    </body>
+</html>

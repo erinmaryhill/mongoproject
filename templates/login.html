@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Log-In</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+      <h1>LOG-IN TO VIEW THE DATABASE & ADD SONGS</h1>
+        <ul>
+            {% for song in music %}
+      <li>{{ song.song }}</li>
+            {% endfor %}
+        </ul>
+
+        <form action="/login" method="POST">
+            <label for="username">Name</label>
+            <input type="text" name="username">
+            <label for="password">Password</label>
+            <input type="password" name="password">
+            <input type="submit" value="Log In">
+        </form>
+
+
+
+
+    </body>
+</html>

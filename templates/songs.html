@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>MUSIC!</title>
+    </head>
+    <body>
+      <h1>Add your song of choice below!</h1>
+<h2>You are logged in as {{ session['username'] }}. </h2>
+<h3><a href="/logout">Logout</a></h3>
+        <ul>
+            {% for song in music %}
+      <li>{{ song.song }} - {{song.artist}}</li>
+            {% endfor %}
+        </ul>
+
+
+        <form action="/songs" method="POST">
+            <label for="title">Song Title</label>
+            <input type="text" name="title">
+            <label for="artist">Song Artist</label>
+            <input type="text" name="artist">
+            <label for="description">Why you chose this song</label>
+            <input type="text" name="description">
+            <input type="submit" value="Submit">
+        </form>
+
+
+    </body>
+</html>
